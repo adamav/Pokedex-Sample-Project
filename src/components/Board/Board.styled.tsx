@@ -9,5 +9,7 @@ export const BoardStyled = styled.div`
     border-style:solid;
     margin-top:10px;
     margin-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
 
 `
