@@ -5,6 +5,13 @@ import App from 'containers/App';
 import { Provider } from 'react-redux';
 import store from 'store/store';
 
+
+//to check store data from console log
+if(process.env.NODE_ENV ==='development'){
+  //@ts-ignore
+  window.store = store;
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
