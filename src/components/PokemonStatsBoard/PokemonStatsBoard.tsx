@@ -144,7 +144,7 @@ const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
 
                    <Horizontal>
                     <FlexableSpace/>
-                     <span>Lighting</span>
+                     <span>{pokemon?.pokemonType}</span>
                    
 
                    </Horizontal>
