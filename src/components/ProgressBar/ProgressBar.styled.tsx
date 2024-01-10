@@ -8,5 +8,6 @@ export const ProgressBarDiv = styled.div`
     border-color:black;
     border-width:1px;
     border-style:solid;
+    margin:2px;
    
 `
