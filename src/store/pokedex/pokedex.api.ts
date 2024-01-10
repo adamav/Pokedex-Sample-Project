@@ -71,9 +71,12 @@ export const searchForPokemonAPI = async (name:string, thunkAPI:any) =>{
         //get type
         const pokemonType = pokemonData.types[0].type.name;
 
+        const name = pokemonData.name;
+        const sprite = pokemonData.sprites.front_default;
+
        
        
-        return {data:pokemonData,stats,pokemonType, allEvolutionData, descriptionText};
+        return {data:pokemonData,stats,pokemonType,name, sprite, allEvolutionData, descriptionText};
  
         
     } catch (error) {
