@@ -5,6 +5,7 @@ export interface PokemonDataInterface{
     pokemonType:string,
     name:string,
     sprite:string;
+    id:number;
     allEvolutionData: any,
     descriptionText:string,
 }
