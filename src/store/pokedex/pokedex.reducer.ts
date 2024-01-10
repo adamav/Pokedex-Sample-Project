@@ -5,8 +5,6 @@ import { PokedexInterface } from "./pokedex.interface";
 
 const initiatState:PokedexInterface = {
     pokemonData: null,
-    allEvolutionData:null,
-    descriptionText:"",
     isFetchingData:false,
     dataFetchedSuccessfully:false,
    
@@ -22,7 +20,7 @@ const pokedexReducer = createReducer(initiatState, buider =>{
     .addCase(searchForPokemon.fulfilled, (state, action) =>{
 
 
-        return{...action.payload, isFetchingData:false, dataFetchedSuccessfully:true}
+        return{pokemonData:action.payload, isFetchingData:false, dataFetchedSuccessfully:true}
 
     })
     .addCase(searchForPokemon.rejected, (state) =>{
