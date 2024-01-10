@@ -3,6 +3,8 @@ import { SearchInputInterface } from './SearchInputField.interface';
 import Horizontal from 'components/Horizontal';
 import InputField from 'components/InputField/InputField';
 import Button from 'components/Button';
+import Vertical from 'components/Vertical';
+import FlexableSpace from 'components/FlexableSpace';
 
 const SearchInputField: React.FC<SearchInputInterface>  = ({onSearchEntered, ...props}) =>{
 
@@ -26,13 +28,28 @@ const SearchInputField: React.FC<SearchInputInterface>  = ({onSearchEntered, ...
 
     return(
 
-        <Horizontal>
+        <Vertical>
 
-            <InputField {...props} value={searchInput} onChange={handleChange} />
+            {searchInput ==="" &&
 
-            <Button label='Enter' onClick={handleOnCick} />
+                <Horizontal style={{marginBottom:'10px'}}>
+                   <FlexableSpace/>
+                    <span>Enter pokemon name</span>
+                   <FlexableSpace/>
+                </Horizontal>
+            
+            }
 
-        </Horizontal>
+            <Horizontal>
+
+                <InputField {...props} value={searchInput} onChange={handleChange} />
+
+                <Button label='Enter' onClick={handleOnCick} />
+
+            </Horizontal>
+
+        </Vertical>
+       
 
     );
 }
