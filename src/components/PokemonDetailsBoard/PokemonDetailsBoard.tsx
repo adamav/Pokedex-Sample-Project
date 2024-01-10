@@ -19,7 +19,7 @@ const PokemonDetialsBoard : React.FC<PokemonDetailsBoardInterface> = ({pokemon})
                 <FlexableSpace />
                     <Vertical>
 
-                        <img src={pokemon?.data.sprites.front_default}/>
+                        <img src={pokemon?.sprite}/>
                         <FlexableSpace />
 
                         <Horizontal>
@@ -33,7 +33,7 @@ const PokemonDetialsBoard : React.FC<PokemonDetailsBoardInterface> = ({pokemon})
                 <FlexableSpace />
                 <Vertical>
 
-                    <p>{pokemon?.data.name}</p>
+                    <p>{pokemon?.name}</p>
                     <p>HT. {pokemon?.data.height}</p>
                     <p>WT. {pokemon?.data.weight}</p>
 

@@ -18,7 +18,7 @@ const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
                 <FlexableSpace />
                     <Vertical>
 
-                        <img src={pokemon?.data.sprites.front_default}/>
+                        <img src={pokemon?.sprite}/>
                         <FlexableSpace />
 
                         <Horizontal>
@@ -34,7 +34,7 @@ const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
                 <SpecialBoard>
                 <Vertical>
 
-                    <p>{pokemon?.data.name}</p>
+                    <p>{pokemon?.name}</p>
                     
                     <Horizontal style={{width:"125px"}}>
 
