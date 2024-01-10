@@ -1,6 +1,6 @@
-import React from "react";
+import React, {HtmlHTMLAttributes} from "react";
 
-export interface HorizontalInteface{
+export interface HorizontalInteface extends HtmlHTMLAttributes<HTMLDivElement>{
 
-    children: React.ReactNode;
+ 
 }
