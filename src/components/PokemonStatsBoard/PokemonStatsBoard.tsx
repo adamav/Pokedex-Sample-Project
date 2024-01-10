@@ -10,10 +10,6 @@ import SpecialBoard from "components/SpecialBoard";
 
 const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
 
-    const test = useRef(null)
-
-    console.log(test.current)
-
     return (
 
         <WhiteBoard>
@@ -69,7 +65,7 @@ const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
 
                             <Horizontal>
                                 <FlexableSpace />
-                                    35/35
+                                    {`${pokemon?.stats.hp}/${pokemon?.stats.hp}`}
                                 <FlexableSpace />
                             </Horizontal>
                             <FlexableSpace/>
@@ -108,30 +104,30 @@ const PokemonStatsBoard : React.FC<PokemonStatsBoardInterface> =({pokemon}) =>{
 
                     <Horizontal>
                         <FlexableSpace/>
-                        <span>10</span>
+                        <span>{pokemon?.stats.attack}</span>
                     </Horizontal>
                     <span>Defense</span>
                     <Horizontal>
                         <FlexableSpace/>
-                        <span>10</span>
+                        <span>{pokemon?.stats.defense}</span>
                     </Horizontal>
 
                     <span>Speed</span>
                     <Horizontal>
                         <FlexableSpace/>
-                        <span>10</span>
+                        <span>{pokemon?.stats.speed}</span>
                     </Horizontal>
 
                     <span>Sp.Att</span>
                     <Horizontal>
                         <FlexableSpace/>
-                        <span>10</span>
+                        <span>{pokemon?.stats["special-attack"]}</span>
                     </Horizontal>
 
                     <span>Sp.Def</span>
                     <Horizontal>
                         <FlexableSpace/>
-                        <span>10</span>
+                        <span>{pokemon?.stats["special-defense"]}</span>
                     </Horizontal>
                 </Vertical>
 
