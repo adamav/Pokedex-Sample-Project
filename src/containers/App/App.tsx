@@ -178,11 +178,14 @@ function App() {
                     </Horizontal>
 
 
-                    <Horizontal style={{marginTop:"10px"}}>
-                    <FlexableSpace/>
-                      <Button label='Evolutions' onClick={() => setShowEvolutions(true)} />
-                    <FlexableSpace/>
-                    </Horizontal>
+                    {dataFetchedSuccessfully &&
+
+                      <Horizontal style={{marginTop:"10px"}}>
+                        <FlexableSpace/>
+                          <Button label='Evolutions' onClick={() => setShowEvolutions(true)} />
+                        <FlexableSpace/>
+                      </Horizontal>
+                    }
                   
 
                     <Horizontal style={{marginTop:"10px"}}>

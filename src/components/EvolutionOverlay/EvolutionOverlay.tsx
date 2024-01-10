@@ -11,10 +11,11 @@ import Button from 'components/Button';
 
 const EvolutionOverlay : React.FC<EvolutionOverlayInterface>= ({show, pokemon, onSelectEvolution, onClose, ...props}) =>{
 
+   
+
     const [evolutionIndex, setEvolutionIndex] = useState<number>(0);
 
-    const {name, image} = pokemon?.allEvolutionData[evolutionIndex];
-
+    
     const handlePreviouClick = () =>{
 
         setEvolutionIndex(prev => prev -1 >= 0 ? prev -1 : 0)
@@ -28,7 +29,7 @@ const EvolutionOverlay : React.FC<EvolutionOverlayInterface>= ({show, pokemon, o
     const handleOnSelectClick = () =>{
 
         if(onSelectEvolution)
-            onSelectEvolution(name);
+            onSelectEvolution(pokemon?.allEvolutionData[evolutionIndex].name);
     }
 
     const handleCoseCLick = () =>{
@@ -69,11 +70,11 @@ const EvolutionOverlay : React.FC<EvolutionOverlayInterface>= ({show, pokemon, o
                                 <Vertical>
                                     <Horizontal>
                                         <FlexableSpace/>
-                                            <span>{name}</span>
+                                            <span>{pokemon?.allEvolutionData[evolutionIndex].name}</span>
                                         <FlexableSpace/>
                                     </Horizontal>
 
-                                    <img src={image}/>
+                                    <img src={pokemon?.allEvolutionData[evolutionIndex].image}/>
 
                                     <Horizontal>
                                         <FlexableSpace/>
