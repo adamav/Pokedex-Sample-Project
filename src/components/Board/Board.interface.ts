@@ -1,6 +1,5 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
-export interface BoardInterface{
+export interface BoardInterface extends HTMLAttributes<HTMLDivElement>{
 
-    children: React.ReactNode,
 }

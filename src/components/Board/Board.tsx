@@ -2,11 +2,11 @@ import React from 'react';
 import { BoardStyled } from './Board.styled';
 import { BoardInterface } from './Board.interface';
 
-const Board : React.FC<BoardInterface> = ({children}) =>{
+const Board : React.FC<BoardInterface> = ({children, ...props}) =>{
 
     return (
 
-        <BoardStyled>
+        <BoardStyled {...props}>
             {children}
         </BoardStyled>
     );

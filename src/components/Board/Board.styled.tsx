@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { BoardInterface } from "./Board.interface";
 
-export const BoardStyled = styled.div`
+export const BoardStyled = styled.div<BoardInterface>`
     
     background-color:white;
     border-color:black;
