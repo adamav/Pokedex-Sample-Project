@@ -2,6 +2,7 @@ export interface PokemonDataInterface{
 
     data : any,
     stats: any,
+    pokemonType:string,
     allEvolutionData: any,
     descriptionText:string,
 }
