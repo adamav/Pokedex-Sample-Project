@@ -1,6 +1,5 @@
-import React from "react"
+import React, {HtmlHTMLAttributes} from "react"
 
-export interface VerticalInterface{
+export interface VerticalInterface extends HtmlHTMLAttributes<HTMLDivElement>{
 
-    children : React.ReactNode
 }

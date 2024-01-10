@@ -4,10 +4,10 @@ import { VerticalInterface } from './Vertical.interface';
 
 
 //used to handling vertical layoutting
-const Vertical: React.FC<VerticalInterface> = ({children}) =>{
+const Vertical: React.FC<VerticalInterface> = ({children, ...props}) =>{
 
     return(
-        <VerticalDiv>
+        <VerticalDiv {...props}>
 
             {children}
 

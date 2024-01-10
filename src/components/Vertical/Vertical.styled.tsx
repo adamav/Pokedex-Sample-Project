@@ -7,4 +7,5 @@ export const VerticalDiv = styled.div`
     flex-direction:column;
     position:relative;
     //height:100%;
+    
 `
