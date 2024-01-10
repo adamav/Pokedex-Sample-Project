@@ -59,7 +59,7 @@ export const searchForPokemonAPI = async (name:string, thunkAPI:any) =>{
         const descriptionText = randomEntries.join();
 
 
-        return {pokemonData, allEvolutionData, descriptionText};
+        return {data:pokemonData, allEvolutionData, descriptionText};
  
         
     } catch (error) {
