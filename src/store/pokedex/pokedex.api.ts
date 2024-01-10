@@ -58,8 +58,18 @@ export const searchForPokemonAPI = async (name:string, thunkAPI:any) =>{
 
         const descriptionText = randomEntries.join();
 
+        //get stats data 
+        const stats: any = {};
 
-        return {data:pokemonData, allEvolutionData, descriptionText};
+         pokemonData.stats.forEach((st: any)=>{
+
+                stats[st.stat.name] = st.base_stat
+            
+          
+        })
+
+       
+        return {data:pokemonData,stats, allEvolutionData, descriptionText};
  
         
     } catch (error) {
