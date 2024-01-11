@@ -1,5 +1,6 @@
 {
   "name": "pokedex_smaple_project",
+  "homepage": "https://upthereinteractive.com/pokedex",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
