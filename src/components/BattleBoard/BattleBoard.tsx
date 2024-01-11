@@ -188,12 +188,10 @@ const BattleBoard : React.FC<BattleBoardInterface> = ({pokemone}) =>{
                         <DoubleBoard>
 
                             <Grid style={{width:"100px"}}>
-                                <span>test</span>
-                                <span>test</span>
-                                <span>test</span>
-                                <span>test</span>
-                                <span>test</span>
-                                <span>test</span>
+                                {pokemone?.attacks.map((attack)=>{
+
+                                    return <span style={{fontSize:"12px"}}>{attack}</span>
+                                })}
                             </Grid>
 
                         <FlexableSpace/>
