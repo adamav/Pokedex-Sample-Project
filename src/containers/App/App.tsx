@@ -16,11 +16,13 @@ import PokemonStatsBoard from 'components/PokemonStatsBoard';
 import Button from 'components/Button';
 import SeachHistoryOverlay from 'components/SearchHistoryOverlay';
 import EvolutionOverlay from 'components/EvolutionOverlay';
+import BattleBoard from 'components/BattleBoard/';
 
 enum AppBoardState{
 
     ShowDetailsBoard,
     ShowStatsBoard,
+    ShowBattleBoard,
    
 }
 
@@ -134,6 +136,9 @@ function App() {
       case AppBoardState.ShowStatsBoard:
         return  <PokemonStatsBoard pokemon={pokemonSearched} />
 
+      case AppBoardState.ShowBattleBoard:
+
+        return <BattleBoard pokemone={pokemonSearched}/>
       
     }
   }
@@ -173,7 +178,7 @@ function App() {
                       <FlexableSpace />
                         <Button label='<' onClick={showPreviousBoard} disabled={!dataFetchedSuccessfully|| boardState === AppBoardState.ShowDetailsBoard} />
                         <FlexableSpace />
-                        <Button label='>' onClick={showNextBoard} disabled={!dataFetchedSuccessfully || boardState === AppBoardState.ShowStatsBoard}/>
+                        <Button label='>' onClick={showNextBoard} disabled={!dataFetchedSuccessfully || boardState === AppBoardState.ShowBattleBoard}/>
                       <FlexableSpace />
                     </Horizontal>
 
