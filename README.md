@@ -2,19 +2,19 @@
 
 1. Clone the project repository to your local machine:
 
-git clone <repository-url>
+        git clone <repository-url>
 
 2. Navigate to the project directory:
 
-cd <project-directory>
+        cd <project-directory>
 
 3. Install project dependencies using npm:
 
-npm install
+        npm install
 
 Ensure that you are using Node version 16. You can use NVM (Node Version Manager) to manage your Node.js versions. If NVM is installed, you can set the required Node version by running:
 
-nvm use
+        nvm use
 
 If you don't have Node version 16 installed, please install it before proceeding.
 
@@ -22,9 +22,9 @@ If you don't have Node version 16 installed, please install it before proceeding
 
 To start the project, run the following command
 
-npm run start
+        npm run start
 
-The application will be accessible at http://localhost:<port>.
+
 
 # Pokedex Demo
 
@@ -47,11 +47,16 @@ In terms of design, my aim was to replicate the aesthetic found in the Pokémon 
 
 The following features have been implemented for the sample project:
 
-**Pokemon Search:** Enables users to search for specific Pokemon.
-**Pokemon Details Board:** Displays basic data for the searched Pokemon.
-**Pokemon Stats Board:** Shows detailed stats for the searched Pokemon.
-**Pokemon Battle Board:** Displays attacks for the searched Pokemon.
-**Evolution Overlay:** Displays information about the evolutionary stages of the searched Pokemon. Allows users to select and load evolved forms.
+**Pokemon Search:** Enables users to search for specific Pokemon.  
+
+**Pokemon Details Board:** Displays basic data for the searched Pokemon.  
+
+**Pokemon Stats Board:** Shows detailed stats for the searched Pokemon.  
+
+**Pokemon Battle Board:** Displays attacks for the searched Pokemon.  
+
+**Evolution Overlay:** Displays information about the evolutionary stages of the searched Pokemon. Allows users to select and load evolved forms.  
+
 **Search History Overlay:** Provides a history of all previously searched Pokemon. Users can delete entries and select them to load again.
 
 
