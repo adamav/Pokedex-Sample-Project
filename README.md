@@ -1,46 +1,74 @@
-# Getting Started with Create React App
+# Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone the project repository to your local machine:
 
-## Available Scripts
+git clone <repository-url>
 
-In the project directory, you can run:
+2. Navigate to the project directory:
 
-### `npm start`
+cd <project-directory>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Install project dependencies using npm:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install
 
-### `npm test`
+Ensure that you are using Node version 16. You can use NVM (Node Version Manager) to manage your Node.js versions. If NVM is installed, you can set the required Node version by running:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+nvm use
 
-### `npm run build`
+If you don't have Node version 16 installed, please install it before proceeding.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start the project, run the following command
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm run start
 
-### `npm run eject`
+The application will be accessible at http://localhost:<port>.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Pokedex Demo
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A live demo of the sample project is available at:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+https://upthereinteractive.com/pokedex/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Feel free to explore the demo without having to run the project locally.
 
-## Learn More
+If you would like to checkout how that is, please see the following video if that's any help
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://drive.google.com/file/d/1UEnVYpPQoTgv_0YG1rqz1DDCUyEzNp_A/view?pli=1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Design Consideration
+
+In terms of design, my aim was to replicate the aesthetic found in the Pokémon game. I strived to incorporate similar design elements into this sample project.
+
+# Features Implemented
+
+The following features have been implemented for the sample project:
+
+**Pokemon Search:** Enables users to search for specific Pokemon.
+**Pokemon Details Board:** Displays basic data for the searched Pokemon.
+**Pokemon Stats Board:** Shows detailed stats for the searched Pokemon.
+**Pokemon Battle Board:** Displays attacks for the searched Pokemon.
+**Evolution Overlay:** Displays information about the evolutionary stages of the searched Pokemon. Allows users to select and load evolved forms.
+**Search History Overlay:** Provides a history of all previously searched Pokemon. Users can delete entries and select them to load again.
+
+
+# Incomplete Feature
+
+Given more time, the plan is to enhance the battle board feature by implementing a Pokémon battle. The idea is to have a randomly selected Pokémon battle against the one that was searched for.
+
+The battle board feature is already setup to display two pokemons and would just have to add additional logic for the battle alone.
+
+On top of that, I would have liked to update the Evolution/Search History layout and styling.
+
+
+# Notes
+
+When searching for Pokémon, please ensure that the names are entered in lowercase. The Pokémon API may throw an error if uppercase letters are used.
+
+To mitigate this issue, input validation has been implemented to automatically convert the search input to lowercase. This helps prevent errors and ensures a smooth experience with the search feature.
+
+
+
