@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { getSearchHistory } from "store/search-history/search-history.selectors";
 import { SearchHistoryOverlayInterface } from "./SearchHistoryOverlay.interface";
 import { useAppDispatch } from "store/store";
-import { deleteSeachHistoryWithId } from "store/search-history/search-history.actions";
+import { deleteSeachHistoryWithIndex } from "store/search-history/search-history.actions";
 const SeachHistoryOverlay: React.FC<SearchHistoryOverlayInterface> = ({show, onClickItem, onClose}) =>{
 
     const appDispatch = useAppDispatch();
@@ -29,7 +29,7 @@ const SeachHistoryOverlay: React.FC<SearchHistoryOverlayInterface> = ({show, onC
 
     const handleDeletion  =(id: number) =>{
 
-        appDispatch(deleteSeachHistoryWithId(id));
+        appDispatch(deleteSeachHistoryWithIndex(id));
     }
    
     return(
@@ -55,11 +55,11 @@ const SeachHistoryOverlay: React.FC<SearchHistoryOverlayInterface> = ({show, onC
 
                 <Scrollview>
 
-                    {searchHistory.map(({name, image, id}) =>{
+                    {searchHistory.map(({name, image}, index) =>{
 
                         return (
 
-                            <Vertical key={id}>
+                            <Vertical key={index}>
 
                                 <Horizontal>
                                   
@@ -88,7 +88,7 @@ const SeachHistoryOverlay: React.FC<SearchHistoryOverlayInterface> = ({show, onC
                                     <Vertical>
                                         <FlexableSpace/>
 
-                                        <Button label="X" onClick={() => handleDeletion(id)}/>
+                                        <Button label="X" onClick={() => handleDeletion(index)}/>
                                     
                                         <FlexableSpace/>
                                     </Vertical>

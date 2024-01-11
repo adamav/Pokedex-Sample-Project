@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { saveSearchHistory, deleteSeachHistoryWithId } from "./search-history.actions";
+import { saveSearchHistory, deleteSeachHistoryWithIndex } from "./search-history.actions";
 import { SearchHistoryInterface } from "./search-history.interface";
-import { access } from "fs";
+import { access, stat } from "fs";
 
 
 const initalState : SearchHistoryInterface[] = []
@@ -16,10 +16,10 @@ const searchHistoryReducer = createReducer(initalState, builder =>{
         return [action.payload,...state,  ]
     })
 
-    builder.addCase(deleteSeachHistoryWithId, (state, action)=>{
+    builder.addCase(deleteSeachHistoryWithIndex, (state, action)=>{
 
-
-        return state.filter(s => s.id != action.payload)
+       
+        return[...state.filter((s, index) => index != action.payload)]
     })
 
 });

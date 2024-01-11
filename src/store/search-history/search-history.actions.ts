@@ -6,7 +6,7 @@ export const saveSearchHistory = createAction<SearchHistoryInterface>(
     "searchHistory/saveSearchHistory"
 )
 
-export const deleteSeachHistoryWithId = createAction<number>(
+export const deleteSeachHistoryWithIndex = createAction<number>(
     "searchHistory/deleteSeachHistory"
 
 )
