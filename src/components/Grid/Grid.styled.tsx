@@ -9,5 +9,6 @@ export const GridDiv = styled.div<GridInterface>`
     position:relative;
     flex-wrap:wrap;
   
-    justify-content:space-around
+    justify-content:space-around;
+    gap: 2px;
 `
