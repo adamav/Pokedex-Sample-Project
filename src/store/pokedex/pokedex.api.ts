@@ -79,7 +79,21 @@ export const searchForPokemonAPI = async (name:string, thunkAPI:any) =>{
        const back_sprite = pokemonData.sprites.back_default
        ;
        
-        return {data:pokemonData,stats,pokemonType,name, sprite,id,back_sprite, allEvolutionData, descriptionText};
+        //get random attac move to display
+
+        const maxAttacCount = 4;
+        const attacks = [];
+        for (let i = 0; i < maxAttacCount; i++) {
+          const randomIndex = Math.floor(Math.random() * pokemonData.moves.length);
+          
+          attacks.push(pokemonData.moves[randomIndex].move.name);
+        }
+
+       // console.log(randomAttackEntries)
+       
+
+
+        return {data:pokemonData,stats,pokemonType,name, sprite,id,back_sprite,attacks, allEvolutionData, descriptionText};
  
         
     } catch (error) {

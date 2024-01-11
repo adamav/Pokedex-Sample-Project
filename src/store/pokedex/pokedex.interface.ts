@@ -7,6 +7,7 @@ export interface PokemonDataInterface{
     sprite:string;
     id:number;
     back_sprite:string,
+    attacks:string[],
     allEvolutionData: any,
     descriptionText:string,
 }
