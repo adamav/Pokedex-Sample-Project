@@ -1,12 +1,13 @@
 import React from 'react';
 import { SpecialBoardStyled } from './SpecialBoard.styled';
+import { SpecialBoardInterface } from './SpecialBoard.interface';
 
-const SpecialBoard = ({children}:any) =>{
+const SpecialBoard: React.FC<SpecialBoardInterface> = ({children, ...props}) =>{
 
     return (
 
 
-            <SpecialBoardStyled>
+            <SpecialBoardStyled {...props}>
                 {children}
             </SpecialBoardStyled>
     );

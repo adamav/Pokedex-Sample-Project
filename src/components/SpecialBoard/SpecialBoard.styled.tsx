@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { SpecialBoardInterface } from "./SpecialBoard.interface";
 
-export const SpecialBoardStyled = styled.div`
+export const SpecialBoardStyled = styled.div<SpecialBoardInterface>`
     
     background-color:white;
     border-color:black;
