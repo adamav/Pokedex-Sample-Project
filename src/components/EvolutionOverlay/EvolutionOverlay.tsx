@@ -39,7 +39,7 @@ const EvolutionOverlay : React.FC<EvolutionOverlayInterface>= ({show, pokemon, o
     }
 
     if(!show)
-        return;
+        return null;
 
 
 

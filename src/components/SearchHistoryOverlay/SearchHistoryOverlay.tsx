@@ -19,7 +19,7 @@ const SeachHistoryOverlay: React.FC<SearchHistoryOverlayInterface> = ({show, onC
     const searchHistory = useSelector(getSearchHistory);
 
     if(!show)
-    return
+    return null
 
     const handleOnSearchItemSelcted = (name:string) =>{
 
